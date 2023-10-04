@@ -6,9 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const urlArr = currentUrl.split('data=')
         const urlStr = urlArr[urlArr.length - 1]
         barcodeImg.src = `https://barcode.tec-it.com/barcode.ashx?code=EAN13&data=${urlStr}`
-        html2canvas(document.querySelector('.result-barcode-image'))
-            .then(canvas => {
-                document.querySelector('meta[property="og:image"]').setAttribute("content", canvas.toDataURL());
-            })
+        // html2canvas(document.querySelector('.result-barcode-image'))
+        //     .then(canvas => {
+        //         console.dir(canvas)
+        //         // document.querySelector('meta[property="og:image"]').setAttribute("content", canvas.toDataURL());
+        //     })
     }
 })
