@@ -1,7 +1,6 @@
 import './html2canvas.min.js'
 
 
-console.log(document.readyState)
 
 document.addEventListener('DOMContentLoaded', () => {
     const currentUrl = window.location.href
@@ -13,17 +12,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 })
 
-document.addEventListener('readystatechange', () => {
-
-    if (document.readyState === 'complete') {
-        html2canvas(document.querySelector('.result-barcode-image'))
-            .then(canvas => {
-                const canvasFile = canvas.toDataURL()
-                console.log(canvasFile)
-                document.querySelector('meta[property="og:image"]').setAttribute('content', canvas.toDataURL())
-            })
-    }
-})
-
+// document.addEventListener('readystatechange', () => {
+//
+//     if (document.readyState === 'complete') {
+//         html2canvas(document.querySelector('.result-barcode-image'))
+//             .then(canvas => {
+//                 const canvasFile = canvas.toDataURL()
+//                 console.log(canvasFile)
+//                 document.querySelector('meta[property="og:image"]').setAttribute('content', canvas.toDataURL())
+//             })
+//     }
+// })
+//
 
 
